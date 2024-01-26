@@ -13,7 +13,7 @@ int dfs(int nums[], int target, int i, int j) {
         return -1;
     }
     // 计算中点索引 m
-    int m = (i + j) / 2;
+    int m = i + (j - i) / 2;
     if (nums[m] < target) {
         // 递归子问题 f(m+1, j)
         return dfs(nums, target, m + 1, j);
