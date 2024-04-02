@@ -41,6 +41,10 @@ int main() {
     for (auto iter = map.begin(); iter != map.end(); iter++) {
         cout << iter->first << "->" << iter->second << endl;
     }
+    cout << "\n使用std::for_each迭代器遍历 Key->Value" << endl;
+    for_each(map.begin(), map.end(), [](auto iter) {
+        cout << iter.first << "->" << iter.second << endl;
+    });
 
     return 0;
 }
